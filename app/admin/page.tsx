@@ -18,9 +18,7 @@ export default function AdminPage() {
     try {
       const response = await fetch('/api/profiles');
       const data = await response.json();
-      if (data && data.length > 0) {
-        setProfile(data[0]);
-      }
+      setProfile(Array.isArray(data) ? data[0] : data);
     } catch (error) {
       console.error('Failed to fetch profile:', error);
     } finally {

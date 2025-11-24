@@ -45,9 +45,7 @@ export default function PortfolioPage() {
           experiencesRes.json(),
         ]);
 
-        if (profileData && profileData.length > 0) {
-          setProfile(profileData[0]);
-        }
+        setProfile(Array.isArray(profileData) ? profileData[0] : profileData);
         setSkills(skillsData);
         setProjects(projectsData);
         setExperiences(experiencesData);
