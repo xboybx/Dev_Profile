@@ -78,9 +78,7 @@ export function Experience({ experiences }: ExperienceProps) {
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
-                    <p className="mt-4 text-gray-400"> 
-                      <span className="font-bold">Tech Stack:</span> {experience.tech_stack}
-                    </p>
+                  
                   </motion.div>
                 )}
               </AnimatePresence>
