@@ -110,7 +110,9 @@ export default function PortfolioPage() {
               className="text-2xl font-bold opacity-50 text-gray-500 tracking-widest cursor-pointer"
               onClick={() => scrollToSection('#home')}
             >
-              {profile?.name?.toUpperCase() || 'JASWANTH'}
+              {/* {profile?.full_name?.toUpperCase() || 'JASWANTH'} */}
+              {"JASWANTH"}
+
             </motion.div>
 
             <div className="hidden md:flex items-center gap-8">
