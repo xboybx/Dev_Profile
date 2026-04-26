@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Profile } from '@/lib/supabase';
 import { Github, Linkedin } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface HeroProps {
   profile: Profile | null;
@@ -73,10 +74,11 @@ export function Hero({ profile }: HeroProps) {
             {profile.avatar_url && (
               <div className="relative w-64 h-80 md:w-80 md:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-transparent rounded-xl -z-10" />
-                <img
+                <Image
                   src={profile.avatar_url}
                   alt={profile.full_name}
-                  className="w-full h-full object-cover rounded-xl shadow-2xl"
+                  fill
+                  className="object-cover rounded-xl shadow-2xl"
                 />
               </div>
             )}

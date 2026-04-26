@@ -6,6 +6,7 @@ import { Project } from '@/lib/supabase';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 interface ProjectsProps {
   projects: Project[];
@@ -83,10 +84,11 @@ export function Projects({ projects }: ProjectsProps) {
                       >
                         {project.image_url && (
                           <div className="relative aspect-video overflow-hidden mb-4 rounded-lg">
-                            <img
+                            <Image
                               src={project.image_url}
                               alt={project.title}
-                              className="w-full h-full object-cover"
+                              fill
+                              className="object-cover"
                             />
                           </div>
                         )}
